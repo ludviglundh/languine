@@ -1,46 +1,30 @@
-# linguine 🍝
-
-> Because life's too short to do stuff manually
+<p align="center">
+  <img src="github.png" alt="Linguine Banner" width="100%" />
+</p>
 
 A blazingly fast, deliciously simple way to generate translations for your applications using AI. Powered by GPT-4, linguine helps you translate your JSON locale files with minimal effort.
 
 ## ✨ Features
 
 - 🚀 Lightning-fast AI-powered translations
-- 🎯 Simple JSON-based configuration
+- 🎯 Smart duplicate handling with side-by-side comparison
 - 🌍 Support for multiple target languages
 - 🤖 Powered by GPT-4 for high-quality translations
 - 🛠️ Built with TypeScript for type safety
+- 💾 Automatic environment configuration
+- 🔄 Interactive translation management
 
 ## 🚀 Getting Started
 
 ```bash
-# Clone the repo
-git clone https://github.com/ludviglundh/linguine.git
+# Install globally
+npm install -g linguine
 
-# Install dependencies
-bun install
+# Or run directly with npx
+npx linguine
 
-# Set up your environment variables
-cp .env.local .env
-
-# Configure your project
-# Create a linguine.json with your desired settings:
-{
-  "locale": {
-    "source": "en",
-    "targets": ["da"]
-  },
-  "files": {
-    "json": {
-      "include": ["src/locales/[locale].json"]
-    }
-  }
-}
-
-# Build and run
-bun run build
-bun start
+# Set up your project
+linguine init
 ```
 
 ## 🔧 Configuration
@@ -52,7 +36,7 @@ Configure your translations in `linguine.json`:
   "version": "1.0.0",
   "locale": {
     "source": "en",
-    "targets": ["da"]  // Add more target languages as needed
+    "targets": ["da", "sv", "no"]  // Add any target languages
   },
   "files": {
     "json": {
@@ -60,10 +44,44 @@ Configure your translations in `linguine.json`:
     }
   },
   "openai": {
-    "model": "gpt-4"
+    "model": "gpt-4"  // Or use "gpt-3.5-turbo" for faster translations
   }
 }
 ```
+
+## 🎯 Usage
+
+### Initialize a New Project
+```bash
+linguine init
+```
+
+### Translate Your Files
+```bash
+# Translate to all configured languages
+linguine translate
+
+# Or translate to a specific language
+linguine translate da
+```
+
+### Managing Duplicates
+
+When translating, Linguine smartly handles existing translations:
+
+1. Shows side-by-side comparison of differences
+2. Offers options to:
+   - 🔍 Choose for each translation individually
+   - 💾 Keep all existing translations
+   - 🔄 Use all new translations
+
+### Environment Setup
+
+Linguine automatically manages your OpenAI API key:
+- Checks `.env` and `.env.local` files
+- Securely prompts for key if not found
+- Optionally saves to `.env.local`
+- Automatically adds `.env.local` to `.gitignore`
 
 ## 🤝 Contributing
 

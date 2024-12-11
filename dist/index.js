@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
@@ -9,13 +10,20 @@ var require_package = __commonJS({
     module.exports = {
       name: "linguine",
       version: "1.0.0",
-      description: "A tool for generating language models",
+      description: "A blazingly fast, AI-powered translation tool for your JSON locale files",
       author: "Ludvig Lundh",
       license: "MIT",
-      private: true,
-      bin: "dist/index.js",
+      private: false,
+      bin: {
+        linguine: "./dist/index.js"
+      },
       main: "dist/index.js",
       type: "module",
+      files: [
+        "dist",
+        "README.md",
+        "LICENSE"
+      ],
       scripts: {
         dev: "tsup src/index.ts --format esm --watch --clean",
         start: "node dist/index.js",
@@ -24,7 +32,28 @@ var require_package = __commonJS({
         format: "biome format --write .",
         typecheck: "tsc --noEmit",
         test: "bun test src",
-        clean: "rm -rf node_modules"
+        clean: "rm -rf node_modules",
+        prepublishOnly: "npm run build"
+      },
+      keywords: [
+        "translation",
+        "i18n",
+        "localization",
+        "ai",
+        "gpt",
+        "openai",
+        "cli"
+      ],
+      repository: {
+        type: "git",
+        url: "git+https://github.com/ludviglundh/linguine.git"
+      },
+      bugs: {
+        url: "https://github.com/ludviglundh/linguine/issues"
+      },
+      homepage: "https://github.com/ludviglundh/linguine#readme",
+      engines: {
+        node: ">=18.0.0"
       },
       dependencies: {
         "@ai-sdk/openai": "^1.0.8",

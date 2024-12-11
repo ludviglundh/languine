@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { select } from "@clack/prompts";
 import dotenv from "dotenv";
 import chalk from "chalk";
