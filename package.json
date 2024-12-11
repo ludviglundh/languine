@@ -1,0 +1,36 @@
+{
+	"name": "linguine",
+	"version": "1.0.0",
+	"description": "A tool for generating language models",
+	"author": "Ludvig Lundh",
+	"license": "MIT",
+	"private": true,
+	"bin": "dist/index.js",
+	"main": "dist/index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "tsup src/index.ts --format esm --watch --clean",
+		"start": "node dist/index.js",
+		"build": "tsup src/index.ts --format esm --dts --clean",
+		"lint": "biome check .",
+		"format": "biome format --write .",
+		"typecheck": "tsc --noEmit",
+		"test": "bun test src",
+		"clean": "rm -rf node_modules"
+	},
+	"dependencies": {
+		"@ai-sdk/openai": "^1.0.8",
+		"@biomejs/biome": "^1.9.4",
+		"@clack/prompts": "^0.8.2",
+		"ai": "^4.0.14",
+		"chalk": "^5.3.0",
+		"dedent": "^1.5.3",
+		"dotenv": "^16.4.7",
+		"zod": "^3.24.1"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.2",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.2"
+	}
+}
