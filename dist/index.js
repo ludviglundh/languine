@@ -9,7 +9,7 @@ var require_package = __commonJS({
   "package.json"(exports, module) {
     module.exports = {
       name: "linguai",
-      version: "1.0.0",
+      version: "1.0.1",
       description: "A blazingly fast, AI-powered translation tool for your JSON locale files",
       author: "Ludvig Lundh",
       license: "MIT",
