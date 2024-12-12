@@ -137,11 +137,11 @@ export async function init() {
 		}
 
 		await fs.writeFile(
-			path.join(process.cwd(), "linguine.json"),
+			path.join(process.cwd(), "linguai.json"),
 			JSON.stringify(config, null, 2),
 		);
 
-		outro("Linguine configuration created successfully");
+		outro("linguai configuration created successfully");
 	} catch (error) {
 		outro("Failed to create configuration");
 		process.exit(1);

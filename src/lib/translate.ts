@@ -12,7 +12,7 @@ import { getApiKey } from "./getApiKey.js";
 import { Config } from "../types.js";
 import { prompt as defaultPrompt } from "../prompt.js";
 
-const CONFIG_FILE = "linguine.json";
+const CONFIG_FILE = "linguai.json";
 
 interface TranslationDiff {
 	key: string;
@@ -136,7 +136,7 @@ async function loadConfig(): Promise<Config> {
 		);
 		return JSON.parse(configFile);
 	} catch (error) {
-		throw new Error("😅 Couldn't find linguine.json - run 'linguine init' to create one!");
+		throw new Error("😅 Couldn't find linguai.json - run 'linguai init' to create one!");
 	}
 }
 

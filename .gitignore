@@ -1,6 +1,6 @@
 node_modules
 
-# Linguine dev|debug files
+# linguai dev|debug files
 .env.local
-linguine.json
+linguai.json
 src/locales

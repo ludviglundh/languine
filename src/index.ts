@@ -8,12 +8,12 @@ import { translate } from "./lib/translate.js";
 
 dotenv.config();
 
-console.log(chalk.bold.cyan("🍝 Welcome to Linguine - Let's cook up some translations!\n"));
+console.log(chalk.bold.cyan("🍝 Welcome to linguai - Let's cook up some translations!\n"));
 
 const command = process.argv[2] || await select({
 	message: "What's cooking? Choose your next move:",
 	options: [
-		{ value: "init", label: "🚀 Create a fresh Linguine recipe (new config)" },
+		{ value: "init", label: "🚀 Create a fresh linguai recipe (new config)" },
 		{ value: "translate", label: "🌍 Cook up some translations" },
 		{ value: "instructions", label: "📝 Add your secret sauce (custom instructions)" },
 	],

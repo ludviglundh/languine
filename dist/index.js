@@ -8,14 +8,14 @@ var __commonJS = (cb, mod) => function __require() {
 var require_package = __commonJS({
   "package.json"(exports, module) {
     module.exports = {
-      name: "linguine",
+      name: "linguai",
       version: "1.0.0",
       description: "A blazingly fast, AI-powered translation tool for your JSON locale files",
       author: "Ludvig Lundh",
       license: "MIT",
       private: false,
       bin: {
-        linguine: "./dist/index.js"
+        linguai: "./dist/index.js"
       },
       main: "dist/index.js",
       type: "module",
@@ -46,12 +46,12 @@ var require_package = __commonJS({
       ],
       repository: {
         type: "git",
-        url: "git+https://github.com/ludviglundh/linguine.git"
+        url: "git+https://github.com/ludviglundh/linguai.git"
       },
       bugs: {
-        url: "https://github.com/ludviglundh/linguine/issues"
+        url: "https://github.com/ludviglundh/linguai/issues"
       },
-      homepage: "https://github.com/ludviglundh/linguine#readme",
+      homepage: "https://github.com/ludviglundh/linguai#readme",
       engines: {
         node: ">=18.0.0"
       },
@@ -188,10 +188,10 @@ async function init() {
       }
     }
     await fs.writeFile(
-      path.join(process.cwd(), "linguine.json"),
+      path.join(process.cwd(), "linguai.json"),
       JSON.stringify(config, null, 2)
     );
-    outro("Linguine configuration created successfully");
+    outro("linguai configuration created successfully");
   } catch (error) {
     outro("Failed to create configuration");
     process.exit(1);
@@ -295,7 +295,7 @@ Important Dont's:
 `;
 
 // src/lib/translate.ts
-var CONFIG_FILE = "linguine.json";
+var CONFIG_FILE = "linguai.json";
 async function translate(targetLocale2) {
   intro2(chalk2.bold.cyan("\u{1F30D} Time to make your app speak new languages!"));
   const config = await loadConfig();
@@ -380,7 +380,7 @@ async function loadConfig() {
     );
     return JSON.parse(configFile);
   } catch (error) {
-    throw new Error("\u{1F605} Couldn't find linguine.json - run 'linguine init' to create one!");
+    throw new Error("\u{1F605} Couldn't find linguai.json - run 'linguai init' to create one!");
   }
 }
 function validateAndGetLocales(targetLocale2, targets) {
@@ -589,11 +589,11 @@ async function saveTranslation(targetPath, content) {
 
 // src/index.ts
 dotenv2.config();
-console.log(chalk3.bold.cyan("\u{1F35D} Welcome to Linguine - Let's cook up some translations!\n"));
+console.log(chalk3.bold.cyan("\u{1F35D} Welcome to linguai - Let's cook up some translations!\n"));
 var command = process.argv[2] || await select3({
   message: "What's cooking? Choose your next move:",
   options: [
-    { value: "init", label: "\u{1F680} Create a fresh Linguine recipe (new config)" },
+    { value: "init", label: "\u{1F680} Create a fresh linguai recipe (new config)" },
     { value: "translate", label: "\u{1F30D} Cook up some translations" },
     { value: "instructions", label: "\u{1F4DD} Add your secret sauce (custom instructions)" }
   ]

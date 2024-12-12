@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="github.png" alt="Linguine Banner" width="100%" />
+  <img src="github.png" alt="linguai Banner" width="100%" />
 </p>
 
-A blazingly fast, deliciously simple way to generate translations for your applications using AI. Powered by GPT-4, linguine helps you translate your JSON locale files with minimal effort.
+A blazingly fast, deliciously simple way to generate translations for your applications using AI. Powered by GPT-4, linguai helps you translate your JSON locale files with minimal effort.
 
 ## ✨ Features
 
@@ -18,18 +18,18 @@ A blazingly fast, deliciously simple way to generate translations for your appli
 
 ```bash
 # Install globally
-npm install -g linguine
+npm install -g linguai
 
 # Or run directly with npx
-npx linguine
+npx linguai
 
 # Set up your project
-linguine init
+linguai init
 ```
 
 ## 🔧 Configuration
 
-Configure your translations in `linguine.json`:
+Configure your translations in `linguai.json`:
 
 ```json
 {
@@ -53,21 +53,21 @@ Configure your translations in `linguine.json`:
 
 ### Initialize a New Project
 ```bash
-linguine init
+linguai init
 ```
 
 ### Translate Your Files
 ```bash
 # Translate to all configured languages
-linguine translate
+linguai translate
 
 # Or translate to a specific language
-linguine translate da
+linguai translate da
 ```
 
 ### Managing Duplicates
 
-When translating, Linguine smartly handles existing translations:
+When translating, linguai smartly handles existing translations:
 
 1. Shows side-by-side comparison of differences
 2. Offers options to:
@@ -77,7 +77,7 @@ When translating, Linguine smartly handles existing translations:
 
 ### Environment Setup
 
-Linguine automatically manages your OpenAI API key:
+linguai automatically manages your OpenAI API key:
 - Checks `.env` and `.env.local` files
 - Securely prompts for key if not found
 - Optionally saves to `.env.local`

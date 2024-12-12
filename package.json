@@ -1,12 +1,12 @@
 {
-	"name": "linguine",
+	"name": "linguai",
 	"version": "1.0.0",
 	"description": "A blazingly fast, AI-powered translation tool for your JSON locale files",
 	"author": "Ludvig Lundh",
 	"license": "MIT",
 	"private": false,
 	"bin": {
-		"linguine": "./dist/index.js"
+		"linguai": "./dist/index.js"
 	},
 	"main": "dist/index.js",
 	"type": "module",
@@ -37,12 +37,12 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ludviglundh/linguine.git"
+		"url": "git+https://github.com/ludviglundh/linguai.git"
 	},
 	"bugs": {
-		"url": "https://github.com/ludviglundh/linguine/issues"
+		"url": "https://github.com/ludviglundh/linguai/issues"
 	},
-	"homepage": "https://github.com/ludviglundh/linguine#readme",
+	"homepage": "https://github.com/ludviglundh/linguai#readme",
 	"engines": {
 		"node": ">=18.0.0"
 	},
