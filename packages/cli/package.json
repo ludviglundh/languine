@@ -1,0 +1,23 @@
+{
+  "name": "linguai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "biome check .",
+    "format": "biome format .",
+    "publish": "npm publish"
+  },
+  "dependencies": {
+		"@ai-sdk/openai": "^1.0.8",
+		"@biomejs/biome": "^1.9.4",
+		"@clack/prompts": "^0.8.2",
+		"ai": "^4.0.14",
+		"chalk": "^5.3.0",
+		"dedent": "^1.5.3",
+		"dotenv": "^16.4.7",
+		"zod": "^3.24.1"
+  }
+} 

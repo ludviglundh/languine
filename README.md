@@ -1,4 +1,4 @@
-# Languine
+# Linguai
 
 A blazingly fast, deliciously simple way to generate translations for your applications using AI. Powered by GPT-4, linguai helps you translate your JSON locale files with minimal effort.
 
@@ -19,7 +19,7 @@ A blazingly fast, deliciously simple way to generate translations for your appli
 npm install -g linguai
 
 # Or run directly with npx
-npx linguai
+npx linguai init
 
 # Set up your project
 linguai init

@@ -1,64 +1,21 @@
 {
-	"name": "linguai",
-	"version": "1.0.1",
-	"description": "A blazingly fast, AI-powered translation tool for your JSON locale files",
-	"author": "Ludvig Lundh",
-	"license": "MIT",
-	"private": false,
-	"bin": {
-		"linguai": "./dist/index.js"
-	},
-	"main": "dist/index.js",
-	"type": "module",
-	"files": [
-		"dist",
-		"README.md",
-		"LICENSE"
-	],
-	"scripts": {
-		"dev": "tsup src/index.ts --format esm --watch --clean",
-		"start": "node dist/index.js",
-		"build": "tsup src/index.ts --format esm --dts --clean",
-		"lint": "biome check .",
-		"format": "biome format --write .",
-		"typecheck": "tsc --noEmit",
-		"test": "bun test src",
-		"clean": "rm -rf node_modules",
-		"prepublishOnly": "npm run build"
-	},
-	"keywords": [
-		"translation",
-		"i18n",
-		"localization",
-		"ai",
-		"gpt",
-		"openai",
-		"cli"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ludviglundh/linguai.git"
-	},
-	"bugs": {
-		"url": "https://github.com/ludviglundh/linguai/issues"
-	},
-	"homepage": "https://github.com/ludviglundh/linguai#readme",
-	"engines": {
-		"node": ">=18.0.0"
-	},
-	"dependencies": {
-		"@ai-sdk/openai": "^1.0.8",
-		"@biomejs/biome": "^1.9.4",
-		"@clack/prompts": "^0.8.2",
-		"ai": "^4.0.14",
-		"chalk": "^5.3.0",
-		"dedent": "^1.5.3",
-		"dotenv": "^16.4.7",
-		"zod": "^3.24.1"
-	},
-	"devDependencies": {
-		"@types/node": "^22.10.2",
-		"tsup": "^8.3.5",
-		"typescript": "^5.7.2"
-	}
+  "name": "linguai-root",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "publish": "turbo run publish"
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "@biomejs/biome": "1.4.1",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "bun@1.1.33",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
